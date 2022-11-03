@@ -35,4 +35,13 @@ if __name__ == '__main__':
 
     # Crear acá su gráfico
 
+    fig = plt.figure()
+    fig.suptitle('Range -10 a 10 con potencia en y', fontsize=12)
+    ax = fig.add_subplot()
+
+    ax.plot(x, y, color='b', label='Range')
+    ax.legend()
+    
+    plt.show()
+    
     print("terminamos")
