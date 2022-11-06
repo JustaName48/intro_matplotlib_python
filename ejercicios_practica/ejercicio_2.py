@@ -46,4 +46,13 @@ if __name__ == '__main__':
 
     # Crear acá su gráfico
 
+    fig = plt.figure()
+    ax = fig.add_subplot()
+
+    ax.plot(y1, c='r', label='x al cuadrado')
+    ax.plot(y2, c='g', label='x al cubo')
+    ax.legend()
+
+    plt.show()
+
     print("terminamos")

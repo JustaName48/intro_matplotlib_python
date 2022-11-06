@@ -34,4 +34,14 @@ if __name__ == '__main__':
 
     # Crear acá su gráfico
 
+    fig = plt.figure()
+    fig.suptitle('Tanh', color='g' ,fontsize=16)
+    ax = fig.add_subplot()
+
+    ax.scatter(x, y, c='b', label='Tanh', marker='+')
+    ax.legend()
+    
+    
+    plt.show()
+    
     print("terminamos")
