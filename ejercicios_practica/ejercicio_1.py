@@ -28,20 +28,22 @@ if __name__ == '__main__':
         y.append(i**2)
 
     # Alumno: Crear una "figura" y crear un "ax" con add_subplot
+
     # Graficar el "line plot" de "y" en función de "x"
 
     # Alumno: Colocar la leyenda y el label con el nombre de la función
+
     # Darle color a la línea a su elección
 
+
     # Crear acá su gráfico
-
+    
     fig = plt.figure()
-    fig.suptitle('Range -10 a 10 con potencia en y', fontsize=12)
     ax = fig.add_subplot()
+    ax.plot(x,y, color="tab:red")
+    ax.set_title("Ejercicio 1")
+    ax.set_ylabel(" X")
+    ax.set_xlabel(" Y ")
+    plt.show() 
 
-    ax.plot(x, y, color='b', label='Range')
-    ax.legend()
-    
-    plt.show()
-    
     print("terminamos")

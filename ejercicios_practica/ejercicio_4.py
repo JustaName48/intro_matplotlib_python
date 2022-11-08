@@ -53,29 +53,34 @@ if __name__ == '__main__':
     # Colocar una grilla a elección
 
     # Crear acá su gráfico
+    
+    fig = plt.figure() 
 
-    fig = plt.figure()
-    fig.suptitle('X np.linspace (0, 10, 40)', fontsize= 12 )
     ax1 = fig.add_subplot(2, 2, 1)
-    ax2 = fig.add_subplot(2, 2, 2)
-    ax3 = fig.add_subplot(2, 2, 3)
+    ax2 = fig.add_subplot(2, 2, 2) 
+    ax3 = fig.add_subplot(2, 2, 3) 
     ax4 = fig.add_subplot(2, 2, 4)
-
-    ax1.plot(y1, color= 'r', ls= '--', label= 'X al cuadrado')
-    ax1.legend()
-    ax1.grid()
-
-    ax2.plot(y2, color= 'g', label= 'X al cubo')
-    ax2.legend()
-    ax1.grid()
-
-    ax3.plot(y3, color= 'b', ls= '--', label= 'X a la cuarta')
-    ax3.legend()
-    ax1.grid()
-
-    ax4.plot(y4, color= 'y', label= 'Raiz cuadrada de X')
-    ax4.legend()
-    ax1.grid()
-
+    
+    ax1.plot(x,y1, color="tab:red")
+    ax2.plot(x,y2, color="tab:cyan")
+    ax3.plot(x,y3, color="tab:olive")
+    ax4.plot(x,y4, color="tab:purple")
+    ax1.set_title("Cellar spiders population")
+    ax2.set_title("Jumping spiders population")
+    ax3.set_title("Wolf spiders population")
+    ax4.set_title("Black widow spider population") 
+    ax1.set_xlabel("Time")
+    ax1.set_ylabel("Growth")
+    ax2.set_xlabel("Time")
+    ax2.set_ylabel("Growth")
+    ax3.set_xlabel("Time")
+    ax3.set_ylabel("Growth")
+    ax4.set_xlabel("Time")
+    ax4.set_ylabel("Growth")
+    ax1.grid(ls="dashed")
+    ax2.grid(ls="dashdot")
+    ax3.grid(ls="solid")
+    ax4.grid(ls="dotted")
     plt.show()
+
     print("terminamos")
